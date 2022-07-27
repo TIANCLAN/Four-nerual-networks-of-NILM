@@ -1,0 +1,40 @@
+{
+    "model" : "S2P",
+    "config" : 0,
+    "appliance" : "computerMonitor",
+    "run" : 10,
+    "training" : {
+        "batch_size" : 64,
+        "epoch" : 200,
+        "lr" : 0.001,
+        "decay_steps" : 1,
+        "optimizer" : "adam",
+        "patience" : 20,
+        "start_stopping" : 5,
+        "save_best" : 1,
+        "ratio_train" : 0.3,
+        "ratio_test" : 0,
+        "validation_split" : 0.2,
+        "S2P_strides" : 2
+    },
+    "dataset" : {
+        "name" : "ukdale",
+        "test" : {
+            "batch" : [0.02],
+            "house" : [23],
+            "ratio" : [1]
+        },
+        "train" : {
+            "house" : [21],
+            "ratio" : [1]
+       }
+    },
+    "preprocessing" : {
+        "main_mean" : 18.257384760192135,
+        "main_std" : 44.43154246202752,
+        "app_mean" : 6.089983892829935,
+        "app_std" :22.359209409133943,
+        "width" : 199,
+        "strides" : 199
+    }
+}

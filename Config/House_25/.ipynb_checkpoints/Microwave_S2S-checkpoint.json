@@ -1,0 +1,39 @@
+{
+    "model" : "S2S",
+    "config" : 0,
+    "appliance" : "Microwave",
+    "run" : 10,
+    "training" : {
+        "batch_size" : 128,
+        "epoch" : 200,
+        "lr" : 0.001,
+        "decay_steps" : 1,
+        "optimizer" : "adam",
+        "patience" : 20,
+        "start_stopping" : 10,
+        "save_best" : 1,
+        "ratio_train" : 0.3,
+        "ratio_test" : 0,
+        "validation_split" : 0.2,
+        "S2P_strides" : 1
+    },
+    "dataset" : {
+        "name" : "ukdale",
+        "test" : {
+            "house" : [5],
+            "ratio" : [1]
+        },
+        "train" : {
+            "house" : [1],
+            "ratio" : [1]
+       }
+    },
+    "preprocessing" : {
+        "main_mean" : 18.875102150910244,
+        "main_std" : 130.18151216495056,
+        "app_mean" : 5.8352023942925015,
+        "app_std" : 80.91088842602407,
+        "width" : 200,
+        "strides" : 20
+    }
+}
